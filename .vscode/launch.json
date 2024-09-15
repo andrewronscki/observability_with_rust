@@ -1,0 +1,74 @@
+{
+  // Use o IntelliSense para saber mais sobre os atributos possíveis.
+  // Focalizar para exibir as descrições dos atributos existentes.
+  // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'hubfy_server'",
+      "cargo": {
+        "args": ["build", "--bin=hubfy_server", "--package=hubfy_server"],
+        "filter": {
+          "name": "hubfy_server",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'hubfy_server'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=hubfy_server",
+          "--package=hubfy_server"
+        ],
+        "filter": {
+          "name": "hubfy_server",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'add-test-data'",
+      "cargo": {
+        "args": ["build", "--bin=add-test-data", "--package=hubfy_server"],
+        "filter": {
+          "name": "add-test-data",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'add-test-data'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=add-test-data",
+          "--package=hubfy_server"
+        ],
+        "filter": {
+          "name": "add-test-data",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

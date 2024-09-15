@@ -1,0 +1,21 @@
+[package]
+name = "observability_with_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1.38", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_derive = "1.0"
+serde_urlencoded = "0.7"
+log = "0.4"
+# OpenTelemetry
+opentelemetry = { version = "0.19.0", features = ["rt-tokio", "trace"] }
+opentelemetry-otlp = { version="0.12.0",  features = ["tonic", "metrics"] }
+opentelemetry-semantic-conventions = { version="0.11.0" }
+tracing = "0.1.37"
+tracing-opentelemetry = "0.19.0"
+tracing-subscriber = { version = "0.3.17"}
+
