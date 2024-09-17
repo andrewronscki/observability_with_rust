@@ -14,7 +14,7 @@ pub fn init_trace() -> Result<trace::Tracer, TraceError> {
         .with_trace_config(
             trace::config().with_resource(Resource::new(vec![KeyValue::new(
                 opentelemetry_semantic_conventions::resource::SERVICE_NAME,
-                "rust-basic-app",
+                "observability_with_rust",
             )])),
         )
         .install_batch(runtime::Tokio)
